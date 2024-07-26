@@ -21,3 +21,15 @@ services:
       - "8001:8000"
     depends_on:
       - redis
+
+  celery2:
+    image: celery2-docker:0.0.1
+    build:
+      context: ./celeryworker
+      dockerfile: Dockerfile
+    command: celery -A celery worker -l INFO
+    ports:
+      - "8001:8000"
+    depends_on:
+      - redis
+      - djnago
