@@ -5,7 +5,6 @@ services:
   redis:
     image: redis:7.0.11-alpine
 
-
   django:
     image: django-docker:0.0.1
     build: .
