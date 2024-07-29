@@ -11,6 +11,7 @@ app.conf.task_default_routes = {'newapp.tasks.task1': {'queue':'queue1'}, 'newap
 # @app.task()
 # def add_numbers():
 #     return
+app.conf.task_default_rate_limit = '1/m'
 
 app.conf.broker_transport_options = {
     'priority_steps': list(range(10)),
