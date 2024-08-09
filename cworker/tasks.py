@@ -8,15 +8,15 @@ def tp1(queue='celery'):
 
 @shared_task
 def tp1(queue='celery:1'):
-    time.sleep(3)
+    time.sleep(5)
     return
 
 @shared_task
 def tp1(queue='celery:2'):
-    time.sleep(3)
+    time.sleep(5)
     return
 
 @shared_task
 def tp1(queue='celery:3'):
-    time.sleep(3)
+    time.sleep(5)
     return
